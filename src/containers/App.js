@@ -1,9 +1,11 @@
 import React from 'react';
 import uuid from 'uuid';
+import { hot } from 'react-hot-loader';
 import style from './App.css';
 import Title from '../components/Title.js';
 import TodoList from '../components/TodoList.js';
 import Todo from '../components/Todo.js';
+import TodoForm from '../components/TodoForm.js';
 
 class App extends React.Component {
     constructor(props){
@@ -43,10 +45,11 @@ class App extends React.Component {
             <div className={style.TodoApp}>
                 <Title/>
                 <h2>Liczba zadań: {tasks}</h2> 
+                <TodoForm addTodo={this.addTodo.bind(this)}/>
                 <TodoList tasks={this.state.data} remove={this.removeTodo.bind(this)} />
             </div>
         );
     }
 }
 
-export default App;
+export default hot(module)(App);

@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack",
+    "start": "webpack-dev-server --hot --env development",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -32,8 +32,10 @@
     "optimize-js-plugin": "0.0.4",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
+    "react-hot-loader": "^4.3.3",
     "style-loader": "^0.21.0",
     "webpack": "^4.12.1",
-    "webpack-cli": "^3.0.8"
+    "webpack-cli": "^3.0.8",
+    "webpack-dev-server": "^3.1.4"
   }
 }
